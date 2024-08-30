@@ -8,10 +8,10 @@ function getComputerChoice(choice) {
     if (choice > 33 && choice < 66) {
         return "rock";
     }
-    else if (choice >= 33) {
+    else if (choice <= 33) {
     return "scissors";
     }
-    else (choice <= 66); {
+    else (choice >= 66); {
         return "paper";
     }
     
