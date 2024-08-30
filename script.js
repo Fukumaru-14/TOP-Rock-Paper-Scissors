@@ -19,3 +19,17 @@ function getComputerChoice(choice) {
 
 choice = getComputerChoice();
 console.log(choice)
+/// Create a prompt box that only receives 'Paper, Rock or scissors'
+function getHumanChoice() {
+    humanChoice = prompt("rock, paper, scissors, GO (please only use lesser case and no space at the end) ", )
+    if (humanChoice === "scissors")
+        return "scissors";
+    else if (humanChoice === "rock")
+        return "rock";
+    else if (humanChoice === "paper")
+        return "paper";
+    else (humanChoice)
+        alert("Wrong value");
+}
+humanChoice = getHumanChoice();
+console.log(humanChoice)
