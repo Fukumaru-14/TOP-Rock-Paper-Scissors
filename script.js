@@ -30,6 +30,7 @@ function getHumanChoice() {
         alert("Wrong value");
 }
 /// Create players score
+let replayButton;
 let guessCount = 0;
 let humanScore = 0;
 let computerScore = 0;
@@ -66,11 +67,25 @@ function playRound(humanChoice, choice) {
 
 const humanSelection = getHumanChoice();
 const computerSelection = getComputerChoice();
+console.log("-----------");
 console.log("Computer choose " + computerSelection)
 
 playRound(humanSelection, computerSelection);
+
 console.log("Ronda #" + guessCount);
 console.log(humanScore + " Your score");
 console.log(computerScore + " Computer score");
+
 } }
 playGame(); 
+replayButton = document.createElement('button');
+replayButton.textContent = 'Start new game';
+document.body.appendChild(replayButton);
+replayButton.addEventListener('click', playAgain);
+function playAgain() {    
+    guessCount = 0;
+    humanScore = 0;
+    computerScore = 0;
+    console.clear();
+    playGame();
+}
