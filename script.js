@@ -29,13 +29,20 @@ function getHumanChoice() {
     else (humanChoice)
         alert("Wrong value");
 }
-/// Create players scores
-/// function playGame() {
-/// Create a value for each round, then each time game is played, add 1 to value each round
-
+/// Create players score
 let guessCount = 0;
 let humanScore = 0;
 let computerScore = 0;
+function playGame() {
+/// Create a value for each round, then each time game is played, add 1 to value each round
+
+    rounds = 5;
+for (i = 1; i <= rounds; i++) {
+//    console.log(i);
+//}
+
+
+
 
 /// Create round logic
 /// If human and Computer same answer, TIE
@@ -46,6 +53,7 @@ let computerScore = 0;
 /// If human Paper and Computer Scissors, Scissors beats Paper
 /// If human Paper and Computer Rock, Paper beats Rock
 function playRound(humanChoice, choice) {
+    
     if (humanChoice === choice) {
         console.log("It's a Tie!"); }
     else if (humanChoice === "Scissors" && choice === "Rock" || humanChoice === "Rock" && choice === "Paper" || humanChoice === "Paper" && choice === "Scissors") {
@@ -54,11 +62,15 @@ function playRound(humanChoice, choice) {
     else if (humanChoice === "Paper" && choice === "Rock" || humanChoice === "Rock" && choice === "Scissors" || humanChoice === "Scissors" && choice === "Paper") {
         console.log("You Win, " + humanSelection + " Beats " + computerSelection)
         humanScore++;  }  
-} guessCount = guessCount++;
+} guessCount++;
+
 const humanSelection = getHumanChoice();
 const computerSelection = getComputerChoice();
 console.log("Computer choose " + computerSelection)
+
 playRound(humanSelection, computerSelection);
+console.log("Ronda #" + guessCount);
 console.log(humanScore + " Your score");
 console.log(computerScore + " Computer score");
-// }
+} }
+playGame(); 
